@@ -15,6 +15,7 @@ class Main {
       Service s = new Service();
       Scanner scanner = new Scanner(System.in);
       int choice = 0;
+      
 
       while (choice != 3) {
         System.out.println("Wybierz opcje:");
@@ -28,9 +29,13 @@ class Main {
           case 1:
             System.out.print("Podaj imie studenta: ");
             String newName = scanner.next();
+
+            System.out.print("Podaj nazwisko studenta: ");
+            String newNazwisko = scanner.next();
+            
             System.out.print("Podaj wiek studenta: ");
             int newAge = scanner.nextInt();
-            s.addStudent(new Student(newName, newAge));
+            s.addStudent(new Student(newName,newNazwisko, newAge));
             break;
             
           case 2:

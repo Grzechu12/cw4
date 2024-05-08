@@ -1,7 +1,1 @@
-Krzysztof 20
-Janusz 40
-Mateusz 22
-Wiktor 23
-Grzegorz 43
-Szymon 18
-Grzegorz 92
+Mateusz Nazwisko 98
