@@ -8,29 +8,48 @@ Kod bazowy programu Commit4_0:
 */
 import java.io.IOException;
 import java.util.Scanner;
-import java.io.IOException;
 
 class Main {
   public static void main(String[] args) {
     try {
       Service s = new Service();
-     
       Scanner scanner = new Scanner(System.in);
-      System.out.print("Podaj imie studenta: ");
-      String newName = scanner.next();
-      System.out.print("Podaj wiek studenta: ");
-      int newAge = scanner.nextInt();
+      int choice = 0;
 
-      s.addStudent(new Student(newName, newAge));
+      while (choice != 3) {
+        System.out.println("Wybierz opcje:");
+        System.out.println("1. Dodaj studenta");
+        System.out.println("2. Wyswietl studentow");
+        System.out.println("3. Wyjscie z programu");
+        System.out.print("Wybierz opcje: ");
+        choice = scanner.nextInt();
 
-
-
-      var students = s.getStudents();
-      for(Student current : students) {
-        System.out.println(current.ToString());
+        switch (choice) {
+          case 1:
+            System.out.print("Podaj imie studenta: ");
+            String newName = scanner.next();
+            System.out.print("Podaj wiek studenta: ");
+            int newAge = scanner.nextInt();
+            s.addStudent(new Student(newName, newAge));
+            break;
+            
+          case 2:
+            var students = s.getStudents();
+            for (Student current : students) {
+              System.out.println(current.ToString());
+            }
+            break;
+          case 3:
+            
+            System.out.println("Koniec.");
+            break;
+          default:
+            System.out.println("Wybierz jeszcze raz");
+            break;
+        }
       }
     } catch (IOException e) {
-
+      // Handle IOException
     }
   }
 }
