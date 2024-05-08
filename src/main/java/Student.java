@@ -15,6 +15,7 @@ public class Student {
     return Name + " " + Integer.toString(Age);
   }
 
+  
   public static Student Parse(String str) {
     String[] data = str.split(" ");
     if(data.length != 2) 
