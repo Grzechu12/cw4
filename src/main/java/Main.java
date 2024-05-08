@@ -16,9 +16,9 @@ class Main {
       Service s = new Service();
      
       Scanner scanner = new Scanner(System.in);
-      System.out.print("Enter student name: ");
+      System.out.print("Podaj imie studenta: ");
       String newName = scanner.next();
-      System.out.print("Enter student age: ");
+      System.out.print("Podaj wiek studenta: ");
       int newAge = scanner.nextInt();
 
       s.addStudent(new Student(newName, newAge));
