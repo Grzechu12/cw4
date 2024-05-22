@@ -42,10 +42,7 @@ public class Student {
   }
 
   public String ToString() {
-    return Name + " " + Nazwisko + " " + ((Integer.toString(Age) != null) ? Integer.toString(Age) : "") + " "
-        + ((Integer.toString(Datadzien) != null) ? (Integer.toString(Datadzien) + "-") : "")
-        + ((Integer.toString(Datamiesiac) != null) ? (Integer.toString(Datamiesiac) + "-") : "")
-        + ((Integer.toString(Datarok) != null) ? Integer.toString(Datarok) : "");
+    return Name + " " + Nazwisko + " " + Age + " " + Datadzien + "-\"" + Datamiesiac + "-\"" + Datarok;
   }
 
   public static Student Parse(String str) {

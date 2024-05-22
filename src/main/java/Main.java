@@ -38,12 +38,40 @@ class Main {
 
             System.out.print("Podaj dzien urodzenia: ");
             int newDatadzien = scanner.nextInt();
+            while (true) {
+            
+              newDatadzien = scanner.nextInt();
+              if (newDatadzien >= 1 && newDatadzien <= 31) {
+                break;
+              } else {
+                System.out.println("Dzien musi byc w zakresie 1-31.");
+              }
+            }
+
 
             System.out.print("Podaj miesiac urodzenia: ");
             int newDatamiesiac = scanner.nextInt();
+            while (true) {
+              
+              newDatamiesiac = scanner.nextInt();
+              if (newDatamiesiac >= 1 && newDatamiesiac <= 12) {
+                break;
+              } else {
+                System.out.println("Miesiac musi byc w zakresie 1-12.");
+              }
+            }
 
             System.out.print("Podaj rok urodzenia: ");
             int newDatarok = scanner.nextInt();
+            while (true) {
+              
+              newDatarok = scanner.nextInt();
+              if (newDatarok > 1900 && newDatarok < 2024) {
+                break;
+              } else {
+                System.out.println("Rok musi byc od 1900 do 2023.");
+              }
+            }
 
             s.addStudent(new Student(newName, newNazwisko, newAge, newDatadzien, newDatamiesiac, newDatarok));
 
