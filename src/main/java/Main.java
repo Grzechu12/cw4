@@ -36,14 +36,20 @@ class Main {
             System.out.print("Podaj wiek studenta: ");
             int newAge = scanner.nextInt();
 
-            System.out.print("Podaj date urodzenia: ");
-            String newData = scanner.next();
+            System.out.print("Podaj dzien urodzenia: ");
+            String newDatadzien = scanner.next();
+
+            System.out.print("Podaj miesiac urodzenia: ");
+            String newDatamiesiac = scanner.next();
+
+            System.out.print("Podaj rok urodzenia: ");
+            String newDatarok = scanner.next();
             
 
 
 
             
-            s.addStudent(new Student(newName,newNazwisko,newAge,newData));
+            s.addStudent(new Student(newName,newNazwisko,newAge,newDatadzien,newDatamiesiac,newDatarok));
 
             
             break;
