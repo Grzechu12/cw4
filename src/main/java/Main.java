@@ -1,3 +1,4 @@
+
 /*
 Kod bazowy programu Commit4_0: 
 • Program dodaje do prostej bazy danych (pliku db.txt) dane odnośnie Studentów.
@@ -15,7 +16,6 @@ class Main {
       Service s = new Service();
       Scanner scanner = new Scanner(System.in);
       int choice = 0;
-      
 
       while (choice != 3) {
         System.out.println("Wybierz opcje:");
@@ -32,30 +32,23 @@ class Main {
 
             System.out.print("Podaj nazwisko studenta: ");
             String newNazwisko = scanner.next();
-            
+
             System.out.print("Podaj wiek studenta: ");
             int newAge = scanner.nextInt();
 
             System.out.print("Podaj dzien urodzenia: ");
-            String newDatadzien = scanner.next();
+            int newDatadzien = scanner.nextInt();
 
             System.out.print("Podaj miesiac urodzenia: ");
-            String newDatamiesiac = scanner.next();
+            int newDatamiesiac = scanner.nextInt();
 
             System.out.print("Podaj rok urodzenia: ");
-            String newDatarok = scanner.next();
-            
+            int newDatarok = scanner.nextInt();
 
+            s.addStudent(new Student(newName, newNazwisko, newAge, newDatadzien, newDatamiesiac, newDatarok));
 
-
-            
-            s.addStudent(new Student(newName,newNazwisko,newAge,newDatadzien,newDatamiesiac,newDatarok));
-
-            
             break;
 
-            
-            
           case 2:
             var students = s.getStudents();
             for (Student current : students) {
@@ -63,7 +56,7 @@ class Main {
             }
             break;
           case 3:
-            
+
             System.out.println("Koniec.");
             break;
           default:
